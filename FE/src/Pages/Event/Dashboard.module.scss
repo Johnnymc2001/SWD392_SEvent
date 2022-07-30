@@ -1,0 +1,99 @@
+@import "../../Components/Scss_Abstract/variables";
+
+.dashboard_container {
+  margin-top: 3vh;
+  margin-bottom: 10vh;
+  padding: 0 1rem;
+
+  .carousel_container {
+    // margin-bottom: 5vh;
+  }
+
+  section {
+    margin-top: 15vh;
+  }
+
+  .popular_section {
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $main-blue;
+
+    .icon {
+      font-size: 40px;
+    }
+
+    h1 {
+      margin: 0 2rem;
+    }
+  }
+  .hr_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+
+    div {
+      width: 60%;
+      display: flex;
+
+      :nth-child(2) {
+        width: 60%;
+        height: 2px;
+        background-color: black;
+        border: none;
+      }
+
+      :nth-child(odd) {
+        width: 10%;
+        height: 2px;
+        background-color: black;
+        border: none;
+      }
+    }
+  }
+  .events_card_container {
+    padding: 0 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    // justify-content: space-evenly;
+
+    @media screen and (max-width: $large) {
+      padding: 0 0 0 1rem;
+    }
+
+    @media screen and (max-width: $medium) {
+      padding: 0;
+    }
+  }
+
+  .btn_see_more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+    text-decoration: none;
+    color: white;
+
+    hr {
+      border: none;
+      background-color: gray;
+      height: 0.5px;
+      width: 40%;
+
+      @media screen and (max-width: $large) {
+        width: 30%;
+      }
+
+      @media screen and (max-width: $medium) {
+        display: none;
+      }
+    }
+  }
+}

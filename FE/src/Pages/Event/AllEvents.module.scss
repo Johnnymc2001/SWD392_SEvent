@@ -1,0 +1,32 @@
+@import "../../Components/Scss_Abstract/variables";
+
+.allevents_container {
+  .carousel_container {
+    margin-bottom: 10vh;
+  }
+
+  .search_container {
+    background: url("../../Pictures/topbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 8vh 0;
+    justify-content: center;
+    display: flex;
+
+    div {
+      width: 70%;
+    }
+  }
+  .events_card_container {
+    padding: 0 0 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    // justify-content: space-evenly;
+
+    @media screen and (max-width: $large) {
+      padding: 0;
+    }
+  }
+}

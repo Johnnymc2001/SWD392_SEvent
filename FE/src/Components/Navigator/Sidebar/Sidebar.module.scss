@@ -1,0 +1,160 @@
+@import "../../Scss_Abstract/_variables.scss";
+
+.sidebar_container {
+  width: 250px;
+  padding: 1rem;
+  background-color: white;
+  min-height: 100vh;
+  overflow-y: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+  transition: all 0.5s;
+  box-shadow: $boxshadow;
+
+  &[class*="hidden"] {
+    left: -190px;
+    padding: 1rem 0.5rem;
+
+    + div {
+      margin-left: 60px;
+
+      @media screen and (max-width: $large) {
+        margin-left: 0;
+      }
+    }
+
+    .toggle {
+      margin-right: 5px;
+    }
+
+    @media screen and (max-width: $large) {
+      left: -250px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .brand {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      h2 {
+        margin-left: 0.5rem;
+        color: $main-blue;
+      }
+    }
+
+    .toggle {
+      border-radius: 50%;
+      width: 2rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $light-gray;
+      }
+
+      .toggle_button {
+        color: $main-blue;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .body {
+    user-select: none;
+    margin-top: 3rem;
+
+    &[class*="hidden"] {
+      .submenu {
+        .row {
+          padding: 0.5rem;
+          .title {
+            padding: 0.5rem;
+            .icon {
+              margin-left: 190px;
+            }
+          }
+        }
+      }
+    }
+
+    .submenu {
+      .row {
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        padding: 0 0.5rem;
+        justify-content: space-between;
+
+        &[class*="active"] {
+          color: black;
+          background-color: $bg-hover;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            color: $main-blue;
+            margin-right: 0.5rem;
+          }
+        }
+
+        &:hover {
+          background-color: $bg-hover;
+          cursor: pointer;
+        }
+      }
+
+      .item {
+        max-height: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s;
+
+        a {
+          text-decoration: none;
+          color: gray;
+          padding: 0.3rem;
+          border-radius: 5px;
+          padding-left: 2rem;
+
+          &:hover {
+            background-color: $bg-hover;
+            color: black;
+          }
+
+          &[class*="active"] {
+            color: black;
+            background-color: $bg-hover;
+          }
+        }
+
+        &[class*="show"] {
+          max-height: 500px;
+        }
+      }
+    }
+  }
+}

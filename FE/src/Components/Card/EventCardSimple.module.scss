@@ -1,0 +1,72 @@
+@import "../../Components/Scss_Abstract/variables";
+
+.card_container {
+  text-decoration: none;
+  max-width: 23%;
+  height: 30vh;
+  overflow: hidden;
+  margin: 1rem 0.5rem;
+  position: relative;
+
+  &:hover {
+      opacity: 0.6;
+  }
+
+  @media screen and (max-width: $laptop) {
+    max-width: 30%;
+    margin: 1rem 1rem;
+  }
+
+  @media screen and (max-width: $medium) {
+    max-width: 45%;
+  }
+
+  @media screen and (max-width: $small) {
+    max-width: 100%;
+  }
+
+  .card_img {
+    border-radius: 10px;
+    height: 60%;
+    overflow: hidden;
+
+    img {
+      max-width: 100%;
+      height: auto;
+
+      @media screen and (max-width: $large) {
+        width: 100%;
+      }
+
+      @media screen and (max-width: $laptop) {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .description {
+    .title {
+      margin-top: 4px;
+      margin-bottom: 0px;
+      color: black;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    .date {
+      margin-top: 4px;
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 0px;
+      color: gray;
+    }
+
+    .category {
+        color: gray;
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+  }
+}

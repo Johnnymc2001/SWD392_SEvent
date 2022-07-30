@@ -1,0 +1,88 @@
+@import "../Scss_Abstract/variables";
+
+.carousel_container {
+  width: 100%;
+  background: white;
+  box-shadow: $boxshadow;
+  padding: 2rem 1rem;
+  overflow-x: hidden;
+
+  .swiper {
+    text-align: center;
+    overflow: visible;
+
+    @media screen and (max-width: $x-small) {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .slide {
+      max-height: 50vh;
+
+      @media screen and (max-width: $small) {
+        padding: 0 1rem;
+      }
+
+      @media screen and (max-width: $x-small) {
+        padding: 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: 50vh;
+        border-radius: 10px;
+
+        @media screen and (max-width: $x-small) {
+          height: auto;
+        }
+      }
+    }
+
+    :global(.swiper-button-prev) {
+      color: $main-blue;
+      border-radius: 50%;
+      border: 1px solid $main-blue;
+      width: 3rem;
+      height: 3rem;
+
+      &:after {
+        content: "prev";
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: $main-blue;
+        color: white;
+      }
+    }
+
+    :global(.swiper-button-next) {
+      color: $main-blue;
+      border-radius: 50%;
+      border: 1px solid $main-blue;
+      width: 3rem;
+      height: 3rem;
+
+      &:after {
+        content: "next";
+        font-size: 18px;
+      }
+
+      &:hover {
+        background-color: $main-blue;
+        color: white;
+      }
+    }
+
+    :global(.swiper-pagination) {
+      bottom: -20px;
+      :global(.swiper-pagination-bullet) {
+        background-color: $main-blue;
+      }
+
+      @media screen and (max-width: $x-small) {
+        bottom: 10px;
+      }
+    }
+  }
+}

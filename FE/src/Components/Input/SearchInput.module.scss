@@ -1,0 +1,23 @@
+@import "../Scss_Abstract/variables";
+
+.search_container {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: max-content;
+  background: $bg-search-input;
+  padding: 0.5rem 1rem;
+  box-shadow: $boxshadow;
+  transition: all 0.5s;
+
+  input {
+    background: transparent;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

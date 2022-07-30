@@ -1,0 +1,27 @@
+@import "../Scss_Abstract/variables";
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 18px;
+  padding: 0.3rem 1rem;
+  background-color: $main-blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: $boxshadow;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: $main-blue-hover;
+  }
+
+  .icon {
+    margin-right: 0.3rem;
+    font-size: 25px;
+    color: white;
+    border-radius: 50%;
+  }
+}

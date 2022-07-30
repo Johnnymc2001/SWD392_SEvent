@@ -1,0 +1,29 @@
+@import "../../Components/Scss_Abstract/variables";
+
+.frame_container {
+  margin-left: 250px;
+  position: relative;
+  background-color: $light-gray;
+  transition: all 0.5s;
+
+  @media screen and (max-width: $large) {
+    margin-left: 0;
+  }
+
+  .mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    background-color: $mask;
+    display: none;
+
+    &[class*="mask_on"] {
+      @media screen and (max-width: $large) {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "../Scss_Abstract/variables";
+
+.btn {
+    background: $main-blue;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 10rem;
+    font-weight: 600;
+    font-size: 20px;
+    box-shadow: $boxshadow;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $main-blue-hover;
+    }
+}

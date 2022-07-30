@@ -1,0 +1,26 @@
+@import "../Scss_Abstract/variables";
+
+.paginate_container {
+    text-align: center;
+    user-select: none;
+
+    li {
+        display: inline-block;
+        cursor: pointer;
+
+        a {
+            padding: 0.5rem 1rem;
+            display: inline-block;
+        }
+
+        &[class*="selected"] {
+            background-color: $main-blue;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $main-blue-hover;
+            color: white;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@import "../../Scss_Abstract/variables";
+
+.navbar_container {
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main-blue;
+  z-index: 1000;
+  height: 70px;
+  box-shadow: $boxshadow;
+
+  .controller {
+      display: flex;
+      align-items: center;
+
+      .icon {
+          margin-left: 1rem;
+          cursor: pointer;
+          color: white;
+          display: none;
+
+          @media screen and (max-width: $large){
+            display: block;
+          }
+      }
+  }
+
+  .user_area {
+    display: flex;
+    align-items: center;
+
+    .notify {
+        color: white;
+        border-radius: 50%;
+        padding: 1rem;
+        cursor: pointer;
+        .icon {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        &:hover{
+            background-color: $main-blue-hover;
+        }
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        img {
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            background-color: $bg-search-input;
+            margin: 0 1rem 0 0.5rem;
+        }
+
+        p {
+            color: white;
+            padding-right: 0.3rem;
+        }
+
+        &:hover {
+            background-color: $main-blue-hover;
+            transform: translateY(-2px);
+        }
+    }
+  }
+}

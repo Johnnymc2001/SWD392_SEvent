@@ -1,0 +1,60 @@
+@import "../../../Components/Scss_Abstract/variables";
+
+.detail {
+  &_containter {
+    width: 100%;
+  }
+
+  &_imageCover {
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+
+  &_header {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+
+    &_title {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    &_time {
+      margin-bottom: 1rem;
+      span {
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+    }
+
+    &_location {
+      display: flex;
+
+      span {
+        display: block;
+      }
+    }
+
+    &_building {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+
+  &_content {
+  }
+
+  &_orderTicket {
+  }
+
+  &_icon {
+    color: $color-granite-gray;
+    margin-right: 1rem;
+  }
+}
